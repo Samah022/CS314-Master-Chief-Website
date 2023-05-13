@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="ecommerce-gallery" data-mdb-zoom-effect="true" data-mdb-auto-height="true">
+    <div class="row py-3 shadow-5">
+      <div class="col-12 mb-1">
+      </div>
+      <div class="col-3 mt-1">
+        <img
+          src="{% static 'gallary\image3\weddingFood5.jpg' %}"
+          data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/14a.webp"
+          alt="Gallery image 1"
+          class="active w-100"
+        />
+      </div>
+      <div class="col-3 mt-1">
+        <img
+          src="{% static 'gallary\image3\weddingFood2.jpg' %}"
+          data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/12a.webp"
+          alt="Gallery image 2"
+          class="w-100"
+        />
+      </div>
+      <div class="col-3 mt-1">
+        <img
+          src="{% static 'gallary\image3\weddingFood3.jpg' %}"
+          data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/13a.webp"
+          alt="Gallery image 3"
+          class="w-100"
+        />
+      </div>
+      <div class="col-3 mt-1">
+        <img
+          src="{% static 'gallary\image3\weddingFood4.jpg' %}"
+          data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/15a.webp"
+          alt="Gallery image 4"
+          class="w-100"
+        />
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

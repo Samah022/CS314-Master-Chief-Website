@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+
+.container {
+  overflow: auto;
+}
+
+img {
+  float: right;
+  margin-left: 10px;
+  width: 40%;
+  clear: both;
+  height: auto;
+}
+
+.text {
+  width: 50%;
+  text-align: justify;
+}
+
+.text1 {
+  width: 50%;
+  text-align: justify;
+  padding-top: 20px;
+}
+
+</style>
+<main class="containers">
+    <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+      <div class="container">
+        <h1 class="text">From Zero to Hero</h1>
+        <img src="https://image.shutterstock.com/mosaic_250/210376/276835949/stock-photo-smiling-chef-in-his-kitchen-276835949.jpg" alt="">
+        <p class="text1">Becoming a successful chef takes passion, hard work, and a willingness to learn. Starting from zero means learning the basics of cooking, gaining experience by working in different kitchens, developing a personal style, and specializing in a particular cuisine. Facing challenges and setbacks along the way is inevitable, but with dedication and perseverance, those who start from zero can become successful chefs who are respected and admired in the culinary world.</p>
+      </div>
+    </div>
+{% for x in post.all %}
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <h3 class="mb-0">{{x.title}}</h3>
+            <div class="mb-1 text-muted">{{x.date}}</div>
+            <p class="card-text mb-auto">{{x.text}}</p>
+        </div>
+      </div>
+    </div>
+{% endfor %}
+{% endblock %}
